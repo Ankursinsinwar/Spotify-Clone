@@ -1,0 +1,4 @@
+remote this git repo to your local folder name "Spotify-Clone"
+pull the repo every time before you start coding
+add and commit all the changes you made,
+Don't push the commits without team leader's permission.
