@@ -8,6 +8,7 @@ Don't push the commits without team leader's permission.
 Created frontend [react + typescript app]
 Created backend [node.js server]
 Created database [mongodb]
+connect frontend and backend using axios 
 # [Add What you did]
 
 
