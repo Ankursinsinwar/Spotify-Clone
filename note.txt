@@ -1,0 +1,27 @@
+remote this git repo to your local folder name "Spotify-Clone"
+pull the repo every time before you start coding
+add and commit all the changes you made,
+Don't push the commits without team leader's permission.
+
+############### what's done #################
+
+Created frontend [react + typescript app]
+Created backend [node.js server]
+Created database [mongodb]
+connect frontend and backend using axios 
+# [Add What you did]
+
+
+
+
+########### Rough work only ###################
+HHaAzoOQe2S5I3mQ
+group1
+TBPPP_group1
+
+mongodb+srv://group1:TBPPP_group1@cluster0.m2zjp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+mongodb://group1:TBPPP_group1@cluster0-shard-00-00.m2zjp.mongodb.net:27017,cluster0-shard-00-01.m2zjp.mongodb.net:27017,cluster0-shard-00-02.m2zjp.mongodb.net:27017/?ssl=true&replicaSet=atlas-vcqu8g-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
+
+
+mongodb+srv://group1:TBPPP_group1@cluster0.m2zjp.mongodb.net/
