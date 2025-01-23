@@ -64,3 +64,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.r{
+  width: 100px; 
+  background-color: aquamarine;
+  color: black;
+  font-size: 12px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 15px;
+}
