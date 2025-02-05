@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import { clerkMiddleware } from '@clerk/express'
 import fileUpload from "express-fileupload"
 import path from "path";
+import cors from "cors";
 
 import{connectDB} from "./controller/lib/db.js";
 import userRoutes from "./routes/user.route.js";
@@ -14,6 +15,7 @@ import statRoutes from "./routes/stat.route.js";
 
 
 
+
 // this will read the value from the .env file on the port 5000
 dotenv.config ();
 
@@ -21,6 +23,14 @@ const __dirname = path.resolve();
 const app = express();
 // to fetch data from .env files
 const PORT = process.env.PORT;
+
+app.use(cors(
+    {
+        origin: "http://localhost:3000",
+        credentials: true,
+    })
+);
+
 
 app.use(express.json()); // to parese req.body
 app.use(clerkMiddleware());
@@ -46,9 +56,10 @@ app.use((err, req, res, next) =>{
 });
 
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+    await connectDB();
     console.log("Server is running on port " + PORT);
-    connectDB();
+    
 });
 
 // todo: socket.io
