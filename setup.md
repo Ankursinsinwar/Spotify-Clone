@@ -61,4 +61,4 @@ nodemon dev
 npm run dev
 ```
 
-### 4.3 open `http://localhost:3001/` in browser 🌐
+### 4.3 open `http://localhost:3000/` in browser 🌐
