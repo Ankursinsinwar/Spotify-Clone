@@ -7,7 +7,6 @@
     "dev": "nodemon src/server.js",
     "seed:songs": "node src/seeds/songs.js",
     "seed:albums": "node src/seeds/albums.js"
-
   },
   "keywords": [],
   "type": "module",
@@ -22,6 +21,7 @@
     "express": "^4.21.2",
     "express-fileupload": "^1.5.1",
     "mongoose": "^8.9.5",
+    "node-cron": "^3.0.3",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {

@@ -1,25 +1,23 @@
-import { clerkClient } from '@clerk/express';
+import { clerkClient } from "@clerk/express";
 
-export const protectRoute = async( req, res, next) => {
-    if(req.auth.userId){
-        return res.status(401).json({message: "Unautthorised - you must be logged in"});
-    }
-
-    next();
+export const protectRoute = async (req, res, next) => {
+	if (!req.auth.userId) {
+		return res.status(401).json({ message: "Unauthorized - you must be logged in" });
+	}
+	next();
 };
 
-// create function for check user is admin or not
-export const requireAdmin = async(req, res, next) => {
-    try {
-        const currentUser = await clerkClient.user.getUser(req.auth. userId);
-        const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailaddress;
+export const requireAdmin = async (req, res, next) => {
+	try {
+		const currentUser = await clerkClient.users.getUser(req.auth.userId);
+		const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
 
-        if(!isAdmin){
-            return res.status(403).json({ message: "Unauthorised - you must be an admin"});
-        }
+		if (!isAdmin) {
+			return res.status(403).json({ message: "Unauthorized - you must be an admin" });
+		}
 
-        next();
-    } catch (error) {
-      next(error);
-    }
+		next();
+	} catch (error) {
+		next(error);
+	}
 };

@@ -26,7 +26,7 @@ const MainLayout = () => {
 
         {/* right sidebar */}
         <ResizablePanel defaultSize={20} minSize={0} maxSize={25} collapsedSize={0}>
-            friends activity
+            🐍Saapo ki activity
         </ResizablePanel>
     </ResizablePanelGroup>
   </div>;
